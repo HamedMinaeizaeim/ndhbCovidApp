@@ -54,7 +54,7 @@ def get_latest_folder_path(folder):
 
 
 def read_agg_df_file():
-    folder =r"C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\assets\nz-covid-data\vaccine-data"
+    folder =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/nz-covid-data/vaccine-data"
     df_maori_pacific = pd.read_csv(os.path.join(get_latest_folder_path(folder),'sa2_maori_pacific.csv'))
     df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB']=='Northland']
 
@@ -86,7 +86,7 @@ def update_value_geofile(ethcicity='Maori', status=' FIRST DOSE UPTAKE '):
 
 # Read vaccination from Ministry website
 def latest_ministry_filename():
-    folder =r'C:\Users\HMinaeizae\PycharmProjects\Agg_Vaccination\Data'
+    folder =r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/nz-covid-data/vaccine-data'
     today = datetime.date.today()
     date_name = today.strftime('%Y-%m-%d')
     filename = 'Ministry_covid_'+date_name+'.csv'
@@ -100,7 +100,7 @@ def latest_ministry_filename():
 
 def read_ministry_file():
     file_name = latest_ministry_filename()
-    folder = r'C:\Users\HMinaeizae\PycharmProjects\Agg_Vaccination\Data'
+    folder = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/nz-covid-data/vaccine-data'
     return pd.read_csv(os.path.join(folder, file_name))
 
 def create_text_for_fully_vaccination(Ethnicity='Maori'):
@@ -293,10 +293,10 @@ colors = {
     'White': '#ffffff'
 }
 
-lego_image_filename = r'\Photos\logo-landscape-reduc.png' # replace with your own image
+lego_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/Photos/logo-landscape-reduc.png' # replace with your own image
 lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
 
-covid_image_filename = r'\assets\3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png' # replace with your own image
+covid_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png' # replace with your own image
 covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([

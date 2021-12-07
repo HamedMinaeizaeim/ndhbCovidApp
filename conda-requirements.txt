@@ -1,10 +1,7 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: win-64
-attrs=21.2.0=pyhd8ed1ab_0
-blas=1.0=mkl
-brotli-python=1.0.9=py36h82bb817_2
-bzip2=1.0.8=h8ffe710_4
+attrs
+blas
+brotli-python
+bzip2
 ca-certificates=2021.10.26=haa95532_2
 certifi=2021.5.30=py36haa95532_0
 cfitsio=3.470=he774522_6
@@ -97,8 +94,6 @@ pyqt5-sip=4.19.18=pypi_0
 pyqtchart=5.12=pypi_0
 pyqtwebengine=5.12.1=pypi_0
 pysal=1.14.4=py36_0
-python=3.6.13=h3758d61_0
-python-dateutil=2.8.2=pyhd3eb1b0_0
 python_abi=3.6=2_cp36m
 pytz=2021.3=pyhd3eb1b0_0
 pyyaml=5.4.1=py36h2bbff1b_1
