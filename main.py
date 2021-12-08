@@ -154,7 +154,7 @@ def create_text_for_not_vaccination(Ethnicity='Maori'):
 
 
 
-full_path_geojson = r'\assets'
+full_path_geojson = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets'
 geo_file = gpd.read_file(os.path.join(full_path_geojson, 'SA2Final_GEOJason.json'))
 geo_file = geo_file.set_index('SA22018__1')
 geo_file['HOVER'] = np.nan
