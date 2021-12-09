@@ -12,7 +12,7 @@ import os
 import pandas as pd
 import datetime
 import plotly.graph_objs as go
-from scipy.interpolate import interp1d
+#from scipy.interpolate import interp1d
 import numpy as np
 from dash.dependencies import Input, Output
 
