@@ -54,8 +54,8 @@ def get_latest_folder_path(folder):
 
 
 def read_agg_df_file():
-    folder =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/nz-covid-data/vaccine-data"
-    df_maori_pacific = pd.read_csv(os.path.join(get_latest_folder_path(folder),'sa2_maori_pacific.csv'))
+    folder =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"
+    df_maori_pacific = pd.read_csv((older,'sa2_maori_pacific.csv'))
     df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB']=='Northland']
 
     df_all = pd.read_csv(os.path.join(get_latest_folder_path(folder),'sa2.csv'))
@@ -86,7 +86,7 @@ def update_value_geofile(ethcicity='Maori', status=' FIRST DOSE UPTAKE '):
 
 # Read vaccination from Ministry website
 def latest_ministry_filename():
-    folder =r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/nz-covid-data/vaccine-data'
+    folder =r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/'
     today = datetime.date.today()
     date_name = today.strftime('%Y-%m-%d')
     filename = 'Ministry_covid_'+date_name+'.csv'
@@ -100,7 +100,7 @@ def latest_ministry_filename():
 
 def read_ministry_file():
     file_name = latest_ministry_filename()
-    folder = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/nz-covid-data/vaccine-data'
+    folder = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/'
     return pd.read_csv(os.path.join(folder, file_name))
 
 def create_text_for_fully_vaccination(Ethnicity='Maori'):
