@@ -117,7 +117,7 @@ def create_text_for_not_vaccination(Ethnicity='Maori'):
 
 
 def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered'):
-    df_agegroup = pd.read_csv(r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/assets/dhb_residence_uptake.csv")
+    df_agegroup = pd.read_csv(r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/dhb_residence_uptake.csv")
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
@@ -135,7 +135,7 @@ def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose a
 
 
 def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 people'):
-    df_agegroup = pd.read_csv(r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/assets/dhb_residence_uptake.csv")
+    df_agegroup = pd.read_csv(r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/dhb_residence_uptake.csv")
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
@@ -156,7 +156,7 @@ def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 p
 traceDHB = create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 people')
 age_group_number = create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered')
 
-full_path = (r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/assets/"+ 'SA2Final_GEOJason_new.json')
+full_path = (r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"+ 'SA2Final_GEOJason_new.json')
 with urllib.urlopen(full_path) as response:
     counties = json.load(response)
 
@@ -202,10 +202,10 @@ colors = {
     'White': '#ffffff'
 }
 
-lego_image_filename = r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/assets/logo-landscape-reduc.png" # replace with your own image
+lego_image_filename = r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/logo-landscape-reduc.png" # replace with your own image
 lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
 
-covid_image_filename =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/assets/3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png" # replace with your own image
+covid_image_filename =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png" # replace with your own image
 covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([
