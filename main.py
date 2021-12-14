@@ -43,7 +43,7 @@ def read_agg_df_file():
     df_maori_pacific = pd.read_csv('sa2_maori_pacific.csv')
     df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB']=='Northland']
 
-    df_all = pd.read_csv(os.path.join(folder,'sa2.csv'))
+    df_all = pd.read_csv('sa2.csv')
     df_all = df_all[df_all['DHB']=='Northland']
     df_all['ETHNICITY'] = 'all'
     df_all = pd.concat([df_all, df_maori_pacific])
