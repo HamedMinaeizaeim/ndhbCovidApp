@@ -156,7 +156,7 @@ def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 p
 traceDHB = create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 people')
 age_group_number = create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered')
 
-full_path = (r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/SA2Final_GEOJason.json")
+full_path = (r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/SA2Final_GEOJason_new.json")
 with urllib.urlopen(full_path) as response:
     counties = json.load(response)
 
