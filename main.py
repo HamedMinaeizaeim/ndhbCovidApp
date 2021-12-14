@@ -167,7 +167,7 @@ df[status] = df[status].replace(' >950 ', 960)
 df[status] = df[status].astype(float)
 df[status] = df[status]/10
 
-fig = px.choropleth_mapbox(df, geojson=counties, color=df[' FIRST DOSE UPTAKE '], color_continuous_scale='viridis',
+fig = px.choropleth_mapbox(df, geojson=counties, color=df[' FIRST DOSE UPTAKE '], color_continuous_scale='Purp',
                            featureidkey="properties.SA22018__1",
                            locations="SA2 2018",
                            mapbox_style="carto-positron",
@@ -408,7 +408,7 @@ def update_mapSocial(dropdown, Ethdropdown):
     df[status] = df[status].astype(float)
     df[status] = df[status] / 10
 
-    fig = px.choropleth_mapbox(df, geojson=counties, color=df[dropdown], color_continuous_scale='viridis',
+    fig = px.choropleth_mapbox(df, geojson=counties, color=df[dropdown], color_continuous_scale='Purp',
                                featureidkey="properties.SA22018__1",
                                locations="SA2 2018",
                                mapbox_style="carto-positron",
