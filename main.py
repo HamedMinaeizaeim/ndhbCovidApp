@@ -40,7 +40,7 @@ def get_latest_folder_path(folder):
 
 def read_agg_df_file():
     folder =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"
-    df_maori_pacific = pd.read_csv(folder+'sa2_maori_pacific.csv')
+    df_maori_pacific = pd.read_csv('sa2_maori_pacific.csv')
     df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB']=='Northland']
 
     df_all = pd.read_csv(os.path.join(folder,'sa2.csv'))
@@ -68,7 +68,7 @@ def latest_ministry_filename():
 def read_ministry_file():
     file_name = 'Ministry_covid_2021-12-08.csv'
     folder = r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"
-    return pd.read_csv(folder+ file_name)
+    return pd.read_csv(file_name)
 
 def create_text_for_fully_vaccination(Ethnicity='Maori'):
     df = read_ministry_file()
@@ -117,7 +117,7 @@ def create_text_for_not_vaccination(Ethnicity='Maori'):
 
 
 def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered'):
-    df_agegroup = pd.read_csv(r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/dhb_residence_uptake.csv")
+    df_agegroup = pd.read_csv(r"dhb_residence_uptake.csv")
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
@@ -135,7 +135,7 @@ def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose a
 
 
 def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 people'):
-    df_agegroup = pd.read_csv(r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/dhb_residence_uptake.csv")
+    df_agegroup = pd.read_csv(r"dhb_residence_uptake.csv")
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
