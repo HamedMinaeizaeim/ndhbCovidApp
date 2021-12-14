@@ -211,7 +211,7 @@ colors = {
 app.layout = html.Div([
     html.Div([
             html.Div([
-            html.Img(src=app.get_asset_url("logo-landscape-reduc.png")),
+            html.Img(src=app.get_asset_url("logo-landscape-reduc.png"),
                         style={
                                 "height": "100px",
                                  "width": "auto",
@@ -224,7 +224,7 @@ app.layout = html.Div([
             ,
             html.Div([
 
-                html.Img(src=app.get_asset_url("3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png")),
+                html.Img(src=app.get_asset_url("3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png"),
                          style={
                              "height": "100px",
                              "width": "auto",
