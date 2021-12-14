@@ -12,6 +12,7 @@ import os
 import pandas as pd
 import datetime
 import plotly.graph_objs as go
+import urllib.request as urllib
 
 import numpy as np
 from dash.dependencies import Input, Output
@@ -156,7 +157,7 @@ traceDHB = create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per
 age_group_number = create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered')
 
 full_path = (r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/assets/"+ 'SA2Final_GEOJason_new.json')
-with open(full_path) as response:
+with urllib.urlopen(full_path) as response:
     counties = json.load(response)
 
 df = read_agg_df_file()
