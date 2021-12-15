@@ -219,7 +219,7 @@ app.layout = html.Div([
                             }
                      )
                 ],
-                   style={'width': '48%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
+                   style={'width': '98%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
             )
             ,
             html.Div([
@@ -232,7 +232,7 @@ app.layout = html.Div([
                          }
                          )
             ],
-                style={'width': '48%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
+                style={'width': '98%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
             )
         ],
        # className="row flex-display"
