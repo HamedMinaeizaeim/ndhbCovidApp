@@ -213,8 +213,8 @@ app.layout = html.Div([
             html.Div([
             html.Img(src=app.get_asset_url("logo-landscape-reduc.png"),
                         style={
-                                "height": "50px",
-                                 "width": "100px",
+                                "width": "100%",
+                                "height": "auto",
                                 "margin-bottom": "5px",
                             }
                      )
@@ -226,8 +226,8 @@ app.layout = html.Div([
 
                 html.Img(src=app.get_asset_url("3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png"),
                          style={
-                             "height": "50px",
-                             "width": "100px",
+                             "width": "100%",
+                             "height": "auto",
                              "margin-bottom": "5px",
                          }
                          )
