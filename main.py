@@ -183,8 +183,8 @@ fig.update_geos(fitbounds='geojson', visible=True)
 
 fig.update_layout(
     autosize=True,
-    width=1000,
-    height=600,
+    # width=1000,
+    # height=600,
         )
 
 
@@ -212,11 +212,11 @@ app.layout = html.Div([
     html.Div([
             html.Div([
             html.Img(src=app.get_asset_url("logo-landscape-reduc.png"),
-                        style={
-                                "height": "100px",
-                                 "width": "auto",
-                                "margin-bottom": "5px",
-                            }
+                        # style={
+                        #         "height": "100px",
+                        #          "width": "auto",
+                        #         "margin-bottom": "5px",
+                        #     }
                      )
                 ],
                    style={'width': '48%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
@@ -225,11 +225,11 @@ app.layout = html.Div([
             html.Div([
 
                 html.Img(src=app.get_asset_url("3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png"),
-                         style={
-                             "height": "100px",
-                             "width": "auto",
-                             "margin-bottom": "5px",
-                         }
+                        #  style={
+                        #      "height": "100px",
+                        #      "width": "auto",
+                        #      "margin-bottom": "5px",
+                        #  }
                          )
             ],
                 style={'width': '48%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
@@ -423,8 +423,8 @@ def update_mapSocial(dropdown, Ethdropdown):
     fig.update_geos(fitbounds='geojson', visible=True)
     fig.update_layout(
         autosize=True,
-        width=1000,
-        height=600,
+        # width=1000,
+        # height=600,
     )
     return fig
 
