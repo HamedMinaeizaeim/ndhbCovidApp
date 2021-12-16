@@ -267,21 +267,10 @@ app.layout = html.Div([
     className = "row container-display",
     id = "Text"
 ),
-    html.Div([
+    #html.Div([
 
         # Design Tab for Graph
-        html.Div([
-            html.H1('Vaccination by Age Group'),
-            dcc.Tabs(id="tabs-example-graph", value='tab-1-example-graph', children=[
-                dcc.Tab(label='% by age group', value='tab-1-example-graph'),
-                dcc.Tab(label='Number by age group', value='tab-2-example-graph'),
-            ]),
-            html.Div(id='tabs-content-example-graph')
 
-
-        ],
-            className = "pretty_container columns"
-        ),
 
         html.Div([
             html.Div([
@@ -334,12 +323,24 @@ app.layout = html.Div([
         ),
 
 
-    ],
+   # ],
 
     # dcc.Store stores the intermediate value
    # dcc.Store(id='intermediate-value'),
-    className = "pretty_container",
-    ),
+   # className = "pretty_container",
+   # ),
+        html.Div([
+            html.H1('Vaccination by Age Group'),
+            dcc.Tabs(id="tabs-example-graph", value='tab-1-example-graph', children=[
+                dcc.Tab(label='% by age group', value='tab-1-example-graph'),
+                dcc.Tab(label='Number by age group', value='tab-2-example-graph'),
+            ]),
+            html.Div(id='tabs-content-example-graph')
+
+
+        ],
+            className = "pretty_container columns"
+        ),
    html.Div(
        []
        , id= 'graph vaccine Over Time',
