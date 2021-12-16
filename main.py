@@ -280,7 +280,7 @@ app.layout = html.Div([
 
 
         ],
-            className = "pretty_container"
+            className = "pretty_container columns"
         ),
 
         html.Div([
@@ -330,7 +330,7 @@ app.layout = html.Div([
             ),
         ],
             id='graph',
-            className = "pretty_container",
+            className = "pretty_container columns",
         ),
 
 
