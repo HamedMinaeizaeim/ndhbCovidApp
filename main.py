@@ -342,9 +342,9 @@ app.layout = html.Div([
             className = "pretty_container columns"
         ),
    html.Div(
-       []
+       [ html.H6(children='this app created by', id='fixed text')]
        , id= 'graph vaccine Over Time',
-       className="pretty_container"
+       className="pretty_container columns"
 
 
 
