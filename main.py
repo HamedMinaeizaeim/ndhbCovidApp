@@ -338,7 +338,7 @@ app.layout = html.Div([
 
     # dcc.Store stores the intermediate value
    # dcc.Store(id='intermediate-value'),
-    className = "row container-display",
+    className = "pretty_container",
     ),
    html.Div(
        []
