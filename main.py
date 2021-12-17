@@ -342,12 +342,11 @@ app.layout = html.Div([
             className = "pretty_container columns"
         ),
    html.Div(
-       [ html.H6(children='this app created by', id='fixed text')]
+      # [ html.P(children='the data in this app is based on the ', id='fixed text')]
+             [dcc.Markdown('''data in this app is based on the [Ministry of health data] (https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-data-and-statistics/covid-19-vaccine-data) and updated on each wensday''')]
+
        , id= 'graph vaccine Over Time',
        className="pretty_container columns"
-
-
-
 
    )
 
