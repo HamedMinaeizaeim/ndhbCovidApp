@@ -122,14 +122,14 @@ def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose a
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
         traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'], color="Gender")
-        traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
         return traceDHB
     else:
         #df_agegroup = df_agegroup[df_agegroup['Ethnic group'] == 'All']
         traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'], color="Gender")
-        traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
         return traceDHB
 
@@ -140,7 +140,7 @@ def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 p
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
         traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'],  color="Gender",  barmode="group" )
-        traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
         return traceDHB
@@ -149,7 +149,7 @@ def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 p
         df = df_agegroup.groupby(['Age group','Gender']).mean().reset_index()
 
         traceDHB = px.bar(df, y=df[vaccinestatus], x=df['Age group'], color="Gender",  barmode="group")
-        traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
         return traceDHB
 
@@ -332,7 +332,7 @@ app.layout = html.Div([
         html.Div([
             html.H1('Vaccination by Age Group'),
             dcc.Tabs(id="tabs-example-graph", value='tab-1-example-graph', children=[
-                dcc.Tab(label='% by age group', value='tab-1-example-graph'),
+                dcc.Tab(label='Dose uptake rate', value='tab-1-example-graph'),
                 dcc.Tab(label='Number by age group', value='tab-2-example-graph'),
             ]),
             html.Div(id='tabs-content-example-graph')
