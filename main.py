@@ -7,12 +7,12 @@ import pandas as pd
 import json
 import datetime
 import plotly.graph_objects as go
+import plotly.graph_objects as go
 import json
 import os
 import pandas as pd
 import datetime
 import plotly.graph_objs as go
-import urllib.request as urllib
 
 import numpy as np
 from dash.dependencies import Input, Output
@@ -39,41 +39,82 @@ def get_latest_folder_path(folder):
 
 
 def read_agg_df_file():
-    folder =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"
-    df_maori_pacific = pd.read_csv('sa2_maori_pacific.csv')
-    df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB']=='Northland']
+    folder =r"C:\Users\HMinaeizae\PycharmProjects\COVID19_APP"
+    df_maori_pacific = pd.read_csv(os.path.join(folder,'sa2_maori_pacific.csv'))
+    df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB of residence']=='Northland']
 
-    df_all = pd.read_csv('sa2.csv')
-    df_all = df_all[df_all['DHB']=='Northland']
-    df_all['ETHNICITY'] = 'all'
+    df_all = pd.read_csv(os.path.join(folder,'sa2.csv'))
+    df_all = df_all[df_all['DHB of residence']=='Northland']
+    df_all['Ethnicity'] = 'all'
     df_all = pd.concat([df_all, df_maori_pacific])
 
     #df_all = df_all.set_index('SA2 2018')
     return df_all
 
 
-def latest_ministry_filename():
-    folder =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"
-    today = datetime.date.today()
-    date_name = today.strftime('%Y-%m-%d')
-    filename = 'Ministry_covid_'+date_name+'.csv'
-
-    days_to_subtract = 1
-    while not os.path.isfile(os.path.join(folder, filename)):
-        today = today - datetime.timedelta(days=days_to_subtract)
-        date_name = today.strftime('%Y-%m-%d')
-        filename = 'Ministry_covid_' + date_name + '.csv'
-    return filename
+# def latest_ministry_filename():
+#     folder =r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP'
+#     today = datetime.date.today()
+#     date_name = today.strftime('%Y-%m-%d')
+#     filename = 'Ministry_covid.csv'
+#
+#     days_to_subtract = 1
+#     while not os.path.isfile(os.path.join(folder, filename)):
+#         today = today - datetime.timedelta(days=days_to_subtract)
+#         date_name = today.strftime('%Y-%m-%d')
+#         filename = 'Ministry_covid_' + date_name + '.csv'
+#     return filename
 
 def read_ministry_file():
-    file_name = 'Ministry_covid_2021-12-08.csv'
-    folder = r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/tree/master/assets/"
-    return pd.read_csv(file_name)
+    file_name = 'Ministry_covid.csv'
+    folder = r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP'
+    return pd.read_csv(os.path.join(folder, file_name))
+
+def create_dataframe_for_horizon_graph():
+    df = read_ministry_file()
+    df['At least partially vaccinated %'] = df['At least partially vaccinated %'].str.rstrip('%').astype('int')
+    df['Fully vaccinated %'] = df['Fully vaccinated %'].str.rstrip('%').astype('int')
+    data = {'Vaccination status':['Booster vaccinataion %', 'Fully vaccinated %','At least partially vaccinated %',  'Not Vaccinated']}
+    Maori = pd.DataFrame(data)
+    Maori['Ethnicity'] = 'Maori'
+    Maori['Value'] = 0.0
+    df_Maori = df[df['Ethnicity']=='Maori']
+
+    Maori.iloc[0,2] = round(df_Maori.iloc[0,10]/10)
+    Maori.iloc[1,2] =df_Maori.iloc[0,5]-Maori.iloc[0,2]
+    Maori.iloc[2,2] = df_Maori.iloc[0,2]-Maori.iloc[1,2]-Maori.iloc[0,2]
+    Maori.iloc[3,2] = 100.0 - Maori.iloc[2,2]-Maori.iloc[1,2]-Maori.iloc[0,2]
+
+    # Pacific
+    Pacific = pd.DataFrame(data)
+    Pacific['Ethnicity'] = 'Pacific Peoples'
+    Pacific['Value'] = 0
+    df_Pacific = df[df['Ethnicity']=='Pacific Peoples']
+    Pacific.iloc[0,2] = round(df_Pacific.iloc[0,10]/10)
+    Pacific.iloc[1,2] =df_Pacific.iloc[0,5]-Pacific.iloc[0,2]
+    Pacific.iloc[2,2] = df_Pacific.iloc[0,2]-Pacific.iloc[1,2]-Pacific.iloc[0,2]
+    Pacific.iloc[3,2] = 100-Pacific.iloc[2,2]-Pacific.iloc[1,2]-Pacific.iloc[0,2]
+
+    # all
+    all = pd.DataFrame(data)
+    all['Ethnicity'] = 'All Ethnicities'
+    all['Value'] = 0
+    df_all = df[df['Ethnicity'] == 'All']
+    all.iloc[0, 2] = round(df_all.iloc[0, 10] / 10)
+    all.iloc[1, 2] = df_all.iloc[0, 5] - all.iloc[0, 2]
+    all.iloc[2, 2] = df_all.iloc[0, 2] - all.iloc[1, 2]-all.iloc[0, 2]
+    all.iloc[3, 2] = 100 - all.iloc[2, 2]-all.iloc[1, 2]-all.iloc[0, 2]
+
+    df_bar_graph = pd.concat([Maori, Pacific, all])
+    x_data =[Maori['Value'].values.tolist(), Pacific['Value'].values.tolist(), all['Value'].values.tolist()]
+
+    return df_bar_graph, x_data
+
 
 def create_text_for_fully_vaccination(Ethnicity='Maori'):
     df = read_ministry_file()
-    df_filtered = df[df['Ethnicity']==Ethnicity]
-    if Ethnicity=='all':
+    df_filtered = df[df['Ethnicity'].str.contains(Ethnicity, case=False)]
+    if ((Ethnicity=='all') | (Ethnicity=='All')):
         Text = str(df_filtered.iloc[0, 5])+ ' northlanders are fully vaccinated which is '+str(df_filtered.iloc[0, 4])+\
                ' people. '+str(df_filtered.iloc[0, 6]) +' more vaccination to reach 90%'
     else:
@@ -83,8 +124,8 @@ def create_text_for_fully_vaccination(Ethnicity='Maori'):
 
 def create_text_for_partially_vaccination(Ethnicity='Maori'):
     df = read_ministry_file()
-    df_filtered = df[df['Ethnicity']==Ethnicity]
-    if Ethnicity=='all':
+    df_filtered = df[df['Ethnicity'].str.contains(Ethnicity, case=False)]
+    if ((Ethnicity=='all') | (Ethnicity=='All')):
         Text = str(df_filtered.iloc[0, 2])+ ' northlanders are partially vaccinated which is '+str(df_filtered.iloc[0, 1])+\
                ' people. '+str(df_filtered.iloc[0, 3]) +' more vaccination to reach 90%'
     else:
@@ -92,16 +133,27 @@ def create_text_for_partially_vaccination(Ethnicity='Maori'):
                ' people. '+str(df_filtered.iloc[0, 3]) +' more vaccination to reach 90%'
     return Text
 
+def create_text_for_booster_vaccination(Ethnicity='Maori'):
+    df = read_ministry_file()
+    df_filtered = df[df['Ethnicity'].str.contains(Ethnicity, case=False)]
+    if ((Ethnicity=='all') | (Ethnicity=='All')):
+        Text = str(round(df_filtered.iloc[0, 10]/10))+ '% northlanders have received booster vaccine which is '+str(f"{df_filtered.iloc[0, 9]:,}")+\
+               ' people. '
+    else:
+        Text = str(round(df_filtered.iloc[0, 10]/10))+ '% '+Ethnicity+' have received booster vaccine which is '+str(f"{df_filtered.iloc[0, 9]:,}")+\
+               ' people. '
+    return Text
+
 def create_text_for_not_vaccination(Ethnicity='Maori'):
     df = read_ministry_file()
-    df_filtered = df[df['Ethnicity']==Ethnicity]
+    df_filtered = df[df['Ethnicity'].str.contains(Ethnicity, case=False)]
+
     df_filtered['At least partially vaccinated']= df_filtered['At least partially vaccinated'].str.replace(',','').astype(float)
     df_filtered['Fully vaccinated'] = df_filtered['Fully vaccinated'].str.replace(',', '').astype(float)
     df_filtered['Population'] = df_filtered['Population'].str.replace(',', '').astype(float)
 
 
-
-    if Ethnicity=='all' or Ethnicity=='All':
+    if ((Ethnicity=='all') | (Ethnicity=='All')):
 
 
         Text = str(round(((df_filtered.iloc[0, 7]-df_filtered.iloc[0, 1])/df_filtered.iloc[0, 7])*100))+ '% northlanders'+' are not vaccinated which is '+\
@@ -116,31 +168,35 @@ def create_text_for_not_vaccination(Ethnicity='Maori'):
     return Text
 
 
-def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered'):
-    df_agegroup = pd.read_csv(r"dhb_residence_uptake.csv")
+def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='At least partially vaccinated'):
+    df_agegroup = pd.read_csv(r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\dhb_residence_uptake.csv')
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
-        traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'], color="Gender")
-        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'], color="Gender",
+                          color_discrete_sequence=['rgba(38, 24, 74, 0.8)','rgba(122, 120, 168, 0.8)'])
+        traceDHB.update_traces()
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
         return traceDHB
     else:
         #df_agegroup = df_agegroup[df_agegroup['Ethnic group'] == 'All']
-        traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'], color="Gender")
-        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'], color="Gender",
+                          color_discrete_sequence=['rgba(38, 24, 74, 0.8)','rgba(122, 120, 168, 0.8)'])
+        traceDHB.update_traces()
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
         return traceDHB
 
 
-def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 people'):
-    df_agegroup = pd.read_csv(r"dhb_residence_uptake.csv")
+def create_figure(ethnicity='Maori', vaccinestatus='At least partially vaccinated uptake per 1000 people'):
+    df_agegroup = pd.read_csv(r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\dhb_residence_uptake.csv')
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
-        traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'],  color="Gender",  barmode="group" )
-        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        traceDHB = px.bar(df_agegroup, y=df_agegroup[vaccinestatus], x=df_agegroup['Age group'],
+                          color="Gender",  barmode="group", color_discrete_sequence=['rgba(38, 24, 74, 0.8)',
+                                                                                     'rgba(122, 120, 168, 0.8)'])
+        traceDHB.update_traces()
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 
         return traceDHB
@@ -148,26 +204,32 @@ def create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 p
         #df_agegroup = df_agegroup[df_agegroup['Ethnic group'] == 'All']
         df = df_agegroup.groupby(['Age group','Gender']).mean().reset_index()
 
-        traceDHB = px.bar(df, y=df[vaccinestatus], x=df['Age group'], color="Gender",  barmode="group")
-        #traceDHB.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        traceDHB = px.bar(df, y=df[vaccinestatus], x=df['Age group'], color="Gender",  barmode="group",
+                          color_discrete_sequence=['rgba(38, 24, 74, 0.8)','rgba(122, 120, 168, 0.8)'])
+        traceDHB.update_traces()
         traceDHB.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
         return traceDHB
 
-traceDHB = create_figure(ethnicity='Maori', vaccinestatus='First dose uptake per 1000 people')
-age_group_number = create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='First dose administered')
+traceDHB = create_figure(ethnicity='Maori', vaccinestatus='At least partially vaccinated uptake per 1000 people')
+age_group_number = create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='At least partially vaccinated')
 
-full_path = (r"https://raw.githubusercontent.com/HamedMinaeizaeim/ndhbCovidApp/master/assets/SA2Final_GEOJason_new.json")
-with urllib.urlopen(full_path) as response:
+
+
+full_path = os.path.join(r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\assets', 'SA2Final_GEOJason_new.json')
+with open(full_path) as response:
     counties = json.load(response)
 
 df = read_agg_df_file()
-df= df[df['ETHNICITY']=='Maori']
-status = ' FIRST DOSE UPTAKE '
-df[status] = df[status].replace(' >950 ', 960)
-df[status] = df[status].astype(float)
-df[status] = df[status]/10
 
-fig = px.choropleth_mapbox(df, geojson=counties, color=df[' FIRST DOSE UPTAKE '], color_continuous_scale='Purp',
+statuses = ['Fully vaccinated uptake', 'Partially vaccinated uptake', 'Booster vaccinated uptake']
+for status in statuses:
+    df[status] = df[status].replace('>950', 960)
+    df[status] = df[status].astype(float)
+    df[status] = df[status]/10
+
+
+df= df[df['Ethnicity']=='Maori']
+fig = px.choropleth_mapbox(df, geojson=counties, color=df['Fully vaccinated uptake'], color_continuous_scale='Purp',
                            featureidkey="properties.SA22018__1",
                            locations="SA2 2018",
                            mapbox_style="carto-positron",
@@ -183,14 +245,112 @@ fig.update_geos(fitbounds='geojson', visible=True)
 
 fig.update_layout(
     autosize=True,
-    # width=1000,
-    # height=600,
+    width=1000,
+    height=600,
         )
 
+df_bar_graph, x_data = create_dataframe_for_horizon_graph()
+# second version
+
+today = datetime.date.today()
+date_name = today.strftime('%Y-%m-%d')
+# top_labels = ['Booster<br>Vaccination', 'Fully<br>vaccinated %','At<br>least<br>partially<br>vaccinated', 'Not<br>Vaccinated'
+#               ]
+# colors = ['rgba(38, 24, 74, 0.8)', 'rgba(71, 58, 131, 0.8)',
+#           'rgba(122, 120, 168, 0.8)',
+#           'rgba(190, 192, 213, 1)']
+#
+#
+# y_data = ['Maori',
+#           'Pacific Peoples', 'All Ethnicities' ]
+#
+# fig_maori = go.Figure()
+# for i in range(0, len(x_data[0])):
+#     for xd, yd in zip(x_data, y_data):
+#         fig_maori.add_trace(go.Bar(
+#             x=[xd[i]], y=[yd],
+#             orientation='h',
+#             marker=dict(
+#                 color=colors[i],
+#                 line=dict(color='rgb(248, 248, 249)', width=1)
+#             )
+#         ))
+#
+# fig_maori.update_layout(
+#     xaxis=dict(
+#         showgrid=False,
+#         showline=False,
+#         showticklabels=False,
+#         zeroline=False,
+#         domain=[0.15, 1]
+#     ),
+#     yaxis=dict(
+#         showgrid=False,
+#         showline=False,
+#         showticklabels=False,
+#         zeroline=False,
+#     ),
+#     barmode='stack',
+#     paper_bgcolor='rgb(248, 248, 255)',
+#     plot_bgcolor='rgb(248, 248, 255)',
+#     margin=dict(l=120, r=10, t=140, b=80),
+#     showlegend=False,
+# )
+#
+# annotations = []
+#
+# for yd, xd in zip(y_data, x_data):
+#     # labeling the y-axis
+#     annotations.append(dict(xref='paper', yref='y',
+#                             x=0.14, y=yd,
+#                             xanchor='right',
+#                             text=str(yd),
+#                             font=dict(family='Arial', size=14,
+#                                       color='rgb(67, 67, 67)'),
+#                             showarrow=False, align='right'))
+#     # labeling the first percentage of each bar (x_axis)
+#     annotations.append(dict(xref='x', yref='y',
+#                             x=xd[0] / 2, y=yd,
+#                             text=str(xd[0]) + '%',
+#                             font=dict(family='Arial', size=14,
+#                                       color='rgb(248, 248, 255)'),
+#                             showarrow=False))
+#     # labeling the first Likert scale (on the top)
+#     if yd == y_data[-1]:
+#         annotations.append(dict(xref='x', yref='paper',
+#                                 x=xd[0] / 2, y=1.1,
+#                                 text=top_labels[0],
+#                                 font=dict(family='Arial', size=14,
+#                                           color='rgb(67, 67, 67)'),
+#                                 showarrow=False))
+#     space = xd[0]
+#     for i in range(1, len(xd)):
+#             # labeling the rest of percentages for each bar (x_axis)
+#             annotations.append(dict(xref='x', yref='y',
+#                                     x=space + (xd[i]/2), y=yd,
+#                                     text=str(xd[i]) + '%',
+#                                     font=dict(family='Arial', size=14,
+#                                               color='rgb(248, 248, 255)'),
+#                                     showarrow=False))
+#             # labeling the Likert scale
+#             if yd == y_data[-1]:
+#                 annotations.append(dict(xref='x', yref='paper',
+#                                         x=space + (xd[i]/2), y=3.1,
+#                                         text=top_labels[i],
+#                                         font=dict(family='Arial', size=12,
+#                                                   color='rgb(67, 67, 67)'),
+#                                         showarrow=False))
+#             space += xd[i]
+#
+# fig_maori.update_layout(annotations=annotations)
 
 
+fig_maori = px.bar(df_bar_graph, x="Value", y="Ethnicity", color='Vaccination status', orientation='h',
+             title='Vaccination Status by ethnicity (%)',  color_discrete_sequence=['rgba(38, 24, 74, 0.8)', 'rgba(71, 58, 131, 0.8)',
+           'rgba(122, 120, 168, 0.8)',
+           'rgba(190, 192, 213, 1)'])
 
-
+#color_discrete_sequence = px.colors.qualitative.Prism
 colors = {
     'background': '#000000',
     'text': '#bdbdbd',
@@ -202,41 +362,64 @@ colors = {
     'White': '#ffffff'
 }
 
-# lego_image_filename = r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/logo-landscape-reduc.png" # replace with your own image
-# lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
+lego_image_filename = r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\Photos\logo-landscape-reduc.png' # replace with your own image
+lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
 
-# covid_image_filename =r"https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png" # replace with your own image
-# covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
+covid_image_filename = r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\assets\2492-NDHB-Nga-Tai-Ora-Only.png' # replace with your own image
+covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([
     html.Div([
             html.Div([
-            html.Img(src=app.get_asset_url("logo-landscape-reduc.png"),
+            html.Img(src='data:image/png;base64,{}'.format(lego_encoded_image),
                         style={
-                                "width": "100%",
-                                "height": "auto",
+                                 "width": "400px",
+                                 "height": "auto",
                                 "margin-bottom": "5px",
                             }
                      )
                 ],
-                   style={'width': '98%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
+                   className="pretty_container one-half column",
+                   style={ 'backgroundColor': '#0C48F4' }
+                   #className="pretty_container one-half column",
             )
             ,
             html.Div([
 
-                html.Img(src=app.get_asset_url("3146-NDHB-COVID19-Ka-Pai-Website-Banner-1170x215px-4.png"),
+                html.Img(src='data:image/png;base64,{}'.format(covid_encoded_image),
                          style={
-                             "width": "100%",
+                             "width": "400px",
                              "height": "auto",
                              "margin-bottom": "5px",
                          }
                          )
             ],
-                style={'width': '98%','display': 'inline-block', 'textAlign': 'center', 'padding': 10, 'backgroundColor': '#0C48F4'}
+                    className="pretty_container one-half column",
+                 style={ 'backgroundColor': '#FFFFFF'}
+                #className="pretty_container one-half column",
             )
         ],
-       # className="row flex-display"
+        className=" pretty_container row flex-display"
     )
+    ,
+    html.Div([dcc.Graph(figure=fig_maori, id="Maori-Graph", responsive=True,
+                            # style={
+                            #     "width": "100%",
+                            #     "height": "100%",
+                            #     "display": "block",
+                            #     "margin-left": "auto",
+                            #     "margin-right": "auto",
+                            # }
+                        )],
+             # style = {'margin':'auto'},
+             className="pretty_container")
+
+             #
+             # id="maori stoc",
+             #
+             # )
+
+
     ,
     html.Div([
         html.Div([
@@ -255,7 +438,7 @@ app.layout = html.Div([
         ),
         html.Div([
 
-            html.H3(children=create_text_for_not_vaccination(Ethnicity='Maori'), id='text-no-vaccination')
+            html.H3(children=create_text_for_booster_vaccination(Ethnicity='Maori'), id='text-no-vaccination')
         ],
             className="pretty_container one-third column",
             id="H2",
@@ -264,89 +447,97 @@ app.layout = html.Div([
 
 
     ],
-    className = "row container-display",
+    className = "pretty_container row container-display",
     id = "Text"
 ),
-    #html.Div([
+   # html.Div([
 
         # Design Tab for Graph
 
-
+    html.Div([
         html.Div([
+
+            html.Div(
+                [html.Label('vaccination status'),
+                 dcc.RadioItems(
+                     id="dropdown",
+                     options=[
+                         {'label': u'Partially vaccinated (First does)', 'value': 'Partially vaccinated uptake'},
+                         {'label': u'Fully vaccinated (second does)', 'value': 'Fully vaccinated uptake'},
+                         {'label': u'Boosters',                      'value': 'Booster vaccinated uptake'},
+
+                     ],
+                     value='Fully vaccinated uptake'
+                 ), ],
+                id="dropdown Div",
+                className="pretty_container one-half column",
+            ),
+
+            html.Div(
+                [html.Label('Ethnicity'),
+                 dcc.RadioItems(
+                     id="Ethdropdown",
+                     options=[
+                         {'label': 'Maori', 'value': 'Maori'},
+                         {'label': u'Pacific Islanders', 'value': 'Pacific Peoples'},
+                         {'label': u'All Ethnicity', 'value': 'all'}
+                     ],
+                     value='Maori'
+                 ), ],
+                id="Ethnicity dropdown Div",
+                className="pretty_container one-half column",
+            ),
+
+        ],
+            className="row container-display",
+        ),
+        html.Div([
+                html.Div(
+                    [dcc.Graph(figure=fig, id="choropleth")],
+                    # style={"width": 'auto', 'height': 'auto'},
+                    # [dcc.Graph(id="choropleth")],
+                    # id="countGraphContainer",
+                    className="pretty_container",
+                ),
             html.Div([
-
-
-                    html.Div(
-                        [   html.Label('vaccination status'),
-                            dcc.RadioItems(
-                            id="dropdown",
-                            options=[
-                                {'label': u'Partially vaccinated', 'value': ' FIRST DOSE UPTAKE '},
-                                {'label': u'Fully vaccinated', 'value': ' SECOND DOSE UPTAKE '}
-
-                            ],
-                            value=' SECOND DOSE UPTAKE '
-                             ),],
-                        id="dropdown Div",
-                        className="pretty_container one-half column",
-                    ),
-
-                    html.Div(
-                        [html.Label('Ethnicity'),
-                         dcc.RadioItems(
-                             id="Ethdropdown",
-                             options=[
-                                 {'label': 'Maori', 'value': 'Maori'},
-                                 {'label': u'Pacific Islanders', 'value': 'Pacific Peoples'},
-                                 {'label': u'All Ethnicity', 'value': 'all'}
-                             ],
-                             value='Maori'
-                         ), ],
-                        id="Ethnicity dropdown Div",
-                        className="pretty_container one-half column",
-                    ),
-
+                html.H1('Vaccination by Age Group'),
+                dcc.Tabs(id="tabs-example-graph", value='tab-1-example-graph', children=[
+                    dcc.Tab(label='Dose uptake per 1000 people', value='tab-1-example-graph'),
+                    dcc.Tab(label='Number by age group', value='tab-2-example-graph'),
+                ]),
+                html.Div(id='tabs-content-example-graph')
 
             ],
-            className = "row container-display",
-            ),
-            html.Div(
-                [dcc.Graph(figure=fig,id="choropleth")],
-                #style={"width": '90vh', 'height': '90vh'},
-                #[dcc.Graph(id="choropleth")],
-                # id="countGraphContainer",
-                className="pretty_container",
-            ),
-        ],
-            id='graph',
-            className = "pretty_container columns",
-        ),
-
-
-   # ],
-
-    # dcc.Store stores the intermediate value
-   # dcc.Store(id='intermediate-value'),
-   # className = "pretty_container",
-   # ),
-        html.Div([
-            html.H1('Vaccination by Age Group'),
-            dcc.Tabs(id="tabs-example-graph", value='tab-1-example-graph', children=[
-                dcc.Tab(label='Dose uptake rate', value='tab-1-example-graph'),
-                dcc.Tab(label='Number by age group', value='tab-2-example-graph'),
-            ]),
-            html.Div(id='tabs-content-example-graph')
-
+                className="pretty_container"
+            )
 
         ],
-            className = "pretty_container columns"
-        ),
+        className="pretty_container"
+        )
+        ],
+
+        id='graph',
+        className="pretty_container",
+    ),
+
+
+
+    #],
+
+   #  # dcc.Store stores the intermediate value
+   # # dcc.Store(id='intermediate-value'),
+   #  className = "row container-display",
+   #  ),
+
+
    html.Div(
-      # [ html.P(children='the data in this app is based on the ', id='fixed text')]
-             [dcc.Markdown('''data in this app is based on the [Ministry of health data] (https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-data-and-statistics/covid-19-vaccine-data) and updated on each wensday''')]
-
+       #[ html.P(children='the data in this app is based on the ', id='fixed text')]
+       [dcc.Markdown('''The first and second doses of COVID vaccination data are based on the [Ministry of health data](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-data-and-statistics/covid-19-vaccine-data) data and updated weekly. The booster vaccination is based on Northland Public Health Unit intelligence group data and updated daily. The last update is on {} '''.format(date_name))]
        , id= 'graph vaccine Over Time',
        className="pretty_container columns"
+
+
+
 
    )
 
@@ -368,7 +559,7 @@ app.layout = html.Div([
      )
 
 def update_novacc(Ethdropdown):
-    Text = create_text_for_not_vaccination(Ethdropdown)
+    Text = create_text_for_booster_vaccination(Ethdropdown)
     return Text
 
 
@@ -402,9 +593,10 @@ def update_fullyvacc(Ethdropdown):
 def update_mapSocial(dropdown, Ethdropdown):
 
     df = read_agg_df_file()
-    df = df[ df['ETHNICITY']==Ethdropdown]
+    df = df[ df['Ethnicity']==Ethdropdown]
+
     status = dropdown
-    df[status] = df[status].replace(' >950 ', 960)
+    df[status] = df[status].replace('>950', 960)
     df[status] = df[status].astype(float)
     df[status] = df[status] / 10
 
@@ -423,8 +615,8 @@ def update_mapSocial(dropdown, Ethdropdown):
     fig.update_geos(fitbounds='geojson', visible=True)
     fig.update_layout(
         autosize=True,
-        # width=1000,
-        # height=600,
+        width=1000,
+        height=600,
     )
     return fig
 
@@ -440,10 +632,10 @@ def render_content(dropdown, Ethdropdown,tab):
 
 
     if tab == 'tab-1-example-graph':
-        if dropdown == ' FIRST DOSE UPTAKE ':
-            dropdown = 'First dose uptake per 1000 people'
+        if dropdown == 'Partially vaccinated uptake':
+            dropdown = 'At least partially vaccinated uptake per 1000 people'
         else:
-            dropdown = 'Second dose uptake per 1000 people'
+            dropdown = 'Fully vaccinated uptake per 1000 people'
         traceDHB = create_figure(ethnicity=Ethdropdown, vaccinestatus=dropdown)
         return html.Div([
             html.H3('Dose uptake per 1000 people'),
@@ -454,10 +646,10 @@ def render_content(dropdown, Ethdropdown,tab):
             )
         ])
     elif tab == 'tab-2-example-graph':
-        if dropdown == ' FIRST DOSE UPTAKE ':
-            dropdown = 'First dose administered'
+        if dropdown == 'Partially vaccinated uptake':
+            dropdown = 'At least partially vaccinated'
         else:
-            dropdown = 'Second dose administered'
+            dropdown = 'Fully vaccinated'
         traceDHB = create_figure_agegroup_number(ethnicity=Ethdropdown, vaccinestatus=dropdown)
         return html.Div([
             html.H3('Number of doses administered'),
