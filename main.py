@@ -362,16 +362,16 @@ colors = {
     'White': '#ffffff'
 }
 
-lego_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/logo-landscape-reduc.png' # replace with your own image
-lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
+# lego_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/logo-landscape-reduc.png' # replace with your own image
+# lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
 
-covid_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/2492-NDHB-Nga-Tai-Ora-Only.png' # replace with your own image
-covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
+# covid_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/2492-NDHB-Nga-Tai-Ora-Only.png' # replace with your own image
+# covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([
     html.Div([
             html.Div([
-            html.Img(src='data:image/png;base64,{}'.format(lego_encoded_image),
+            html.Img(src=app.get_asset_url("logo-landscape-reduc.png"),
                         style={
                                  "width": "400px",
                                  "height": "auto",
@@ -386,7 +386,7 @@ app.layout = html.Div([
             ,
             html.Div([
 
-                html.Img(src='data:image/png;base64,{}'.format(covid_encoded_image),
+                html.Img(src=app.get_asset_url("2492-NDHB-Nga-Tai-Ora-Only.png"),
                          style={
                              "width": "400px",
                              "height": "auto",
