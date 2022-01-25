@@ -40,10 +40,10 @@ def get_latest_folder_path(folder):
 
 def read_agg_df_file():
     
-    df_maori_pacific = pd.read_csv('sa2_maori_pacific.csv')
+    df_maori_pacific = pd.read_csv(r'sa2_maori_pacific.csv')
     df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB of residence']=='Northland']
 
-    df_all = pd.read_csv('sa2.csv')
+    df_all = pd.read_csv(r'sa2.csv')
     df_all = df_all[df_all['DHB of residence']=='Northland']
     df_all['Ethnicity'] = 'all'
     df_all = pd.concat([df_all, df_maori_pacific])
@@ -66,8 +66,8 @@ def read_agg_df_file():
 #     return filename
 
 def read_ministry_file():
-    file_name = 'Ministry_covid.csv'
-    return pd.read_csv(os.path.join(file_name)
+    file_name = r'Ministry_covid.csv'
+    return pd.read_csv(os.path.join(file_name))
 
 def create_dataframe_for_horizon_graph():
     df = read_ministry_file()
