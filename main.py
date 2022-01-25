@@ -39,11 +39,11 @@ def get_latest_folder_path(folder):
 
 
 def read_agg_df_file():
-    folder =r"C:\Users\HMinaeizae\PycharmProjects\COVID19_APP"
-    df_maori_pacific = pd.read_csv(os.path.join(folder,'sa2_maori_pacific.csv'))
+    
+    df_maori_pacific = pd.read_csv('sa2_maori_pacific.csv'))
     df_maori_pacific = df_maori_pacific[df_maori_pacific['DHB of residence']=='Northland']
 
-    df_all = pd.read_csv(os.path.join(folder,'sa2.csv'))
+    df_all = pd.read_csv('sa2.csv'))
     df_all = df_all[df_all['DHB of residence']=='Northland']
     df_all['Ethnicity'] = 'all'
     df_all = pd.concat([df_all, df_maori_pacific])
@@ -67,8 +67,7 @@ def read_agg_df_file():
 
 def read_ministry_file():
     file_name = 'Ministry_covid.csv'
-    folder = r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP'
-    return pd.read_csv(os.path.join(folder, file_name))
+    return pd.read_csv(os.path.join(file_name))
 
 def create_dataframe_for_horizon_graph():
     df = read_ministry_file()
@@ -169,7 +168,7 @@ def create_text_for_not_vaccination(Ethnicity='Maori'):
 
 
 def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='At least partially vaccinated'):
-    df_agegroup = pd.read_csv(r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\dhb_residence_uptake.csv')
+    df_agegroup = pd.read_csv(r'dhb_residence_uptake.csv')
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
@@ -189,7 +188,7 @@ def create_figure_agegroup_number(ethnicity='Maori', vaccinestatus='At least par
 
 
 def create_figure(ethnicity='Maori', vaccinestatus='At least partially vaccinated uptake per 1000 people'):
-    df_agegroup = pd.read_csv(r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\dhb_residence_uptake.csv')
+    df_agegroup = pd.read_csv(r'dhb_residence_uptake.csv')
     df_agegroup = df_agegroup[df_agegroup['DHB of residence']=='Northland']
     if ethnicity=='Maori' or ethnicity=='Pacific Peoples':
         df_agegroup =  df_agegroup[df_agegroup['Ethnic group']==ethnicity]
@@ -215,8 +214,8 @@ age_group_number = create_figure_agegroup_number(ethnicity='Maori', vaccinestatu
 
 
 
-full_path = os.path.join(r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\assets', 'SA2Final_GEOJason_new.json')
-with open(full_path) as response:
+full_path = (r"https://raw.githubusercontent.com/HamedMinaeizaeim/ndhbCovidApp/master/assets/SA2Final_GEOJason_new.json")
+with urllib.urlopen(full_path) as response:
     counties = json.load(response)
 
 df = read_agg_df_file()
@@ -362,10 +361,10 @@ colors = {
     'White': '#ffffff'
 }
 
-lego_image_filename = r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\Photos\logo-landscape-reduc.png' # replace with your own image
+lego_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/logo-landscape-reduc.png' # replace with your own image
 lego_encoded_image = base64.b64encode(open(lego_image_filename, 'rb').read()).decode('ascii')
 
-covid_image_filename = r'C:\Users\HMinaeizae\PycharmProjects\COVID19_APP\assets\2492-NDHB-Nga-Tai-Ora-Only.png' # replace with your own image
+covid_image_filename = r'https://github.com/HamedMinaeizaeim/ndhbCovidApp/blob/master/assets/2492-NDHB-Nga-Tai-Ora-Only.png' # replace with your own image
 covid_encoded_image = base64.b64encode(open(covid_image_filename, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([
