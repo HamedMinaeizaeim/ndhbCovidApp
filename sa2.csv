@@ -1,109 +1,109 @@
 SA2 Code 2018,SA2 2018,DHB of residence,Population,At least partially vaccinated,Fully vaccinated,Partially vaccinated uptake,Fully vaccinated uptake,SA22018_name,VaccPlanName,Booster vaccinated,Booster vaccinated uptake
 Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
-100100,North Cape,Northland,"1,561","1,355","1,305",868,836,North Cape,Pfizer Booster Plan,276.0,212.47113163972287
-100200,Rangaunu Harbour,Northland,"1,933","1,609","1,507",832,780,Rangaunu Harbour,Pfizer Booster Plan,330.0,206.1211742660837
-100400,Karikari Peninsula,Northland,"1,342","1,132","1,084",844,808,Karikari Peninsula,Pfizer Booster Plan,349.0,327.39212007504693
-100500,Tangonge,Northland,966,835,798,864,826,Tangonge,Pfizer Booster Plan,193.0,223.89791183294665
-100600,Ahipara,Northland,"1,064",892,856,838,805,Ahipara,Pfizer Booster Plan,225.0,265.6434474616293
-100700,Kaitaia East,Northland,"2,007","1,710","1,579",852,787,Kaitaia East,Pfizer Booster Plan,278.0,166.96696696696696
-100800,Kaitaia West,Northland,"2,961","2,533","2,328",855,786,Kaitaia West,Pfizer Booster Plan,438.0,181.2913907284768
-100900,Rangitihi,Northland,807,665,639,824,792,Rangitihi,Pfizer Booster Plan,160.0,245.0229709035222
-101000,Oruru-Parapara,Northland,811,642,607,792,748,Oruru-Parapara,Pfizer Booster Plan,136.0,220.7792207792208
-101100,Taumarumaru,Northland,"2,244","1,999","1,927",891,859,Taumarumaru,Pfizer Booster Plan,728.0,382.9563387690689
-101200,Herekino-Takahue,Northland,863,677,636,784,737,Herekino-Takahue,Pfizer Booster Plan,144.0,223.6024844720497
-101300,Peria,Northland,"1,044",765,705,733,675,Peria,Pfizer Booster Plan,150.0,201.34228187919464
-101400,Taemaro-Oruaiti,Northland,854,691,646,809,756,Taemaro-Oruaiti,Pfizer Booster Plan,184.0,272.18934911242604
-101500,Whakapaku,Northland,657,501,469,763,714,Whakapaku,Pfizer Booster Plan,114.0,236.5145228215768
-101600,Hokianga North,Northland,769,642,596,835,775,Hokianga North,Pfizer Booster Plan,116.0,193.97993311036788
-101700,Kohukohu-Broadwood,Northland,679,559,524,823,772,Kohukohu-Broadwood,Pfizer Booster Plan,205.0,392.72030651341
-101800,Whakarara,Northland,"1,093",919,880,841,805,Whakarara,Pfizer Booster Plan,217.0,239.77900552486187
-101900,Kaeo,Northland,"1,047",810,746,774,713,Kaeo,Pfizer Booster Plan,133.0,167.71752837326608
-102000,Omahuta Forest-Horeke,Northland,971,724,662,746,682,Omahuta Forest-Horeke,Pfizer Booster Plan,142.0,203.14735336194565
-102100,Hokianga South,Northland,"1,154",850,789,737,684,Hokianga South,Pfizer Booster Plan,225.0,283.0188679245283
-102200,Lake Manuwai-Kapiro,Northland,"1,982","1,780","1,718",898,867,Lake Manuwai-Kapiro,Pfizer Booster Plan,431.0,259.7950572634117
-102300,Okaihau,Northland,"1,002",856,825,854,823,Okaihau,Pfizer Booster Plan,159.0,183.6027713625866
-102400,Rangitane-Purerua,Northland,"1,258","1,103","1,044",877,830,Rangitane-Purerua,Pfizer Booster Plan,317.0,304.8076923076923
-102500,Waipapa,Northland,711,623,597,876,840,Waipapa,Pfizer Booster Plan,143.0,231.76661264181524
-102600,Puketotara,Northland,"1,592","1,403","1,364",881,857,Puketotara,Pfizer Booster Plan,300.0,229.8850574712644
-102700,Waima Forest,Northland,957,723,664,755,694,Waima Forest,Pfizer Booster Plan,104.0,149.21090387374463
-102800,Riverview,Northland,"1,950","1,852","1,801",950,924,Riverview,Pfizer Booster Plan,644.0,358.9743589743589
-102900,Waipoua Forest,Northland,"1,130",849,784,751,694,Waipoua Forest,Pfizer Booster Plan,225.0,275.06112469437653
-103000,Kerikeri Central,Northland,"2,366","2,199","2,115",929,894,Kerikeri Central,Pfizer Booster Plan,657.0,325.8928571428572
-103100,Kerikeri South,Northland,"2,480","2,278","2,220",919,895,Kerikeri South,Pfizer Booster Plan,735.0,342.81716417910445
-103200,Ohaeawai-Waimate North,Northland,"1,058",908,873,858,825,Ohaeawai-Waimate North,Pfizer Booster Plan,203.0,221.61572052401743
-103300,Puketona-Waitangi,Northland,"1,254","1,084","1,050",864,837,Puketona-Waitangi,Pfizer Booster Plan,283.0,274.75728155339806
-103400,Ngapuhi,Northland,"1,270","1,029",951,810,749,Ngapuhi,Pfizer Booster Plan,192.0,187.3170731707317
-103500,Kaikohe,Northland,"3,610","2,881","2,654",798,735,Kaikohe,Pfizer Booster Plan,474.0,170.3197987782968
-103600,Pakaraka,Northland,539,465,442,863,820,Pakaraka,Pfizer Booster Plan,117.0,256.57894736842104
-103700,Haruru,Northland,"1,021",870,848,852,831,Haruru,Pfizer Booster Plan,270.0,340.47919293820934
-103800,Russell,Northland,774,702,693,907,895,Russell,Pfizer Booster Plan,287.0,438.8379204892967
-103900,Paihia,Northland,"1,510","1,348","1,291",893,855,Paihia,Pfizer Booster Plan,411.0,334.1463414634146
-104000,Mataraua Forest,Northland,457,358,327,783,716,Mataraua Forest,Pfizer Booster Plan,55.0,159.88372093023256
-104100,Matawaia-Taumarere,Northland,"1,249",985,919,789,736,Matawaia-Taumarere,Pfizer Booster Plan,201.0,212.2492080253432
-104200,Russell Peninsula,Northland,617,528,517,856,838,Russell Peninsula,Pfizer Booster Plan,219.0,446.9387755102041
-104300,Opua (Far North District),Northland,"1,180","1,061","1,033",899,875,Opua (Far North District),Pfizer Booster Plan,405.0,417.09577754891865
-104400,Russell Forest-Rawhiti,Northland,628,536,503,854,801,Russell Forest-Rawhiti,Pfizer Booster Plan,140.0,279.4411177644711
-104500,Moerewa,Northland,"1,338","1,109","1,031",829,771,Moerewa,Pfizer Booster Plan,230.0,208.9009990917348
-104600,Kawakawa,Northland,"1,214","1,040",972,857,801,Kawakawa,Pfizer Booster Plan,208.0,204.3222003929273
-104700,Maromaku,Northland,590,463,440,785,746,Maromaku,Pfizer Booster Plan,74.0,170.90069284064666
-104800,Mangakahia-Hukerenui,Northland,"1,572","1,329","1,249",845,795,Mangakahia-Hukerenui,Pfizer Booster Plan,220.0,185.8108108108108
-104900,Whangaruru,Northland,"2,174","1,876","1,813",863,834,Whangaruru,Pfizer Booster Plan,472.0,265.76576576576576
-105100,Matarau,Northland,"2,767","2,476","2,420",895,875,Matarau,Pfizer Booster Plan,683.0,299.2988606485539
-105200,Hikurangi,Northland,"1,208","1,050",990,869,820,Hikurangi,Pfizer Booster Plan,201.0,188.55534709193245
-105300,Kauri,Northland,"1,547","1,368","1,339",884,866,Kauri,Pfizer Booster Plan,403.0,315.08991399530885
-105400,Maungatapere,Northland,"3,044","2,673","2,609",878,857,Maungatapere,Pfizer Booster Plan,788.0,312.4504361617764
-105500,Kamo West,Northland,"1,931","1,753","1,689",908,875,Kamo West,Pfizer Booster Plan,540.0,323.54703415218694
-105600,Matapouri-Tutukaka,Northland,"1,623","1,462","1,427",901,879,Matapouri-Tutukaka,Pfizer Booster Plan,506.0,371.5124816446402
-105700,Kiripaka,Northland,878,770,743,877,846,Kiripaka,Pfizer Booster Plan,203.0,278.84615384615387
-105800,Kamo East,Northland,"2,459","2,229","2,121",906,863,Kamo East,Pfizer Booster Plan,512.0,245.7993278924628
-105900,Granfield Reserve,Northland,"2,853","2,676","2,606",938,913,Granfield Reserve,Pfizer Booster Plan,906.0,361.244019138756
-106000,Kamo Central,Northland,"1,382","1,269","1,231",918,891,Kamo Central,Pfizer Booster Plan,353.0,296.6386554621849
-106100,Whau Valley,Northland,"2,544","2,266","2,192",891,862,Whau Valley,Pfizer Booster Plan,693.0,335.7558139534884
-106200,Tikipunga North,Northland,"2,809","2,579","2,457",918,875,Tikipunga North,Pfizer Booster Plan,771.0,317.28395061728395
-106300,Pukenui,Northland,"2,021","1,875","1,845",928,913,Pukenui,Pfizer Booster Plan,682.0,383.14606741573033
-106400,Otangarei,Northland,"1,752","1,423","1,254",812,716,Otangarei,Pfizer Booster Plan,165.0,128.70514820592825
-106500,Tikipunga South,Northland,"3,210","2,921","2,808",910,875,Tikipunga South,Pfizer Booster Plan,732.0,265.12133285041654
-106600,Kensington (Whangarei District),Northland,"2,932","2,731","2,647",931,903,Kensington (Whangarei District),Pfizer Booster Plan,928.0,371.79487179487177
-106700,Abbey Caves-Glenbervie,Northland,"1,179","1,078","1,052",914,892,Abbey Caves-Glenbervie,Pfizer Booster Plan,364.0,352.71317829457365
-106800,Mairtown,Northland,"2,210","2,025","1,978",916,895,Mairtown,Pfizer Booster Plan,756.0,407.108239095315
-106900,Maunu-Horahora,Northland,"3,001","2,755","2,678",918,892,Maunu-Horahora,Pfizer Booster Plan,962.0,377.10701685613486
-107000,Woodhill-Vinetown,Northland,"2,498","2,248","2,169",900,868,Woodhill-Vinetown,Pfizer Booster Plan,563.0,279.12741695587505
-107100,Whangarei Central,Northland,972,911,879,937,904,Whangarei Central,Pfizer Booster Plan,230.0,330.4597701149425
-107200,Riverside,Northland,"1,893","1,670","1,626",882,859,Riverside,Pfizer Booster Plan,499.0,323.8157040882544
-107300,Raumanga,Northland,"2,703","2,312","2,108",855,780,Raumanga,Pfizer Booster Plan,468.0,209.77140295831467
-107400,Tarewa,Northland,"1,522","1,290","1,194",848,784,Tarewa,Pfizer Booster Plan,225.0,183.5236541598695
-107500,Morningside (Whangarei District),Northland,"1,930","1,753","1,666",908,863,Morningside (Whangarei District),Pfizer Booster Plan,367.0,226.4034546576188
-107600,Ngunguru,Northland,"1,059",955,932,902,880,Ngunguru,Pfizer Booster Plan,357.0,405.22133938706014
-107700,Otaika-Portland,Northland,"1,172","1,011",972,863,829,Otaika-Portland,Pfizer Booster Plan,268.0,290.98805646036914
-107800,Oakleigh-Mangapai,Northland,"1,980","1,746","1,700",882,859,Oakleigh-Mangapai,Pfizer Booster Plan,520.0,314.96062992125985
-107900,Port-Limeburners,Northland,184,168,159,913,864,Port-Limeburners,Pfizer Booster Plan,36.0,290.3225806451613
-108000,Pataua,Northland,"1,472","1,255","1,216",853,826,Pataua,Pfizer Booster Plan,340.0,284.0434419381788
-108100,Onerahi Park,Northland,"1,419","1,313","1,290",925,909,Onerahi Park,Pfizer Booster Plan,428.0,350.8196721311475
-108200,Sherwood Rise,Northland,"2,024","1,827","1,747",903,863,Sherwood Rise,Pfizer Booster Plan,455.0,263.46265199768385
-108300,Onerahi,Northland,"2,098","1,810","1,726",863,823,Onerahi,Pfizer Booster Plan,583.0,340.3385872737887
-108500,Parua Bay,Northland,"2,268","2,106","2,081",929,918,Parua Bay,Pfizer Booster Plan,794.0,405.7230454777721
-108600,Bream Bay,Northland,"1,877","1,684","1,610",897,858,Bream Bay,Pfizer Booster Plan,421.0,267.4714104193138
-108700,Marsden Bay,Northland,"2,334","2,217","2,179",950,934,Marsden Bay,Pfizer Booster Plan,791.0,384.727626459144
-108800,Ruakaka,Northland,"2,381","2,204","2,131",926,895,Ruakaka,Pfizer Booster Plan,655.0,317.34496124031006
-108900,Bream Head,Northland,"1,225","1,125","1,102",918,900,Bream Head,Pfizer Booster Plan,397.0,386.1867704280156
-109000,Waipu,Northland,"2,777","2,442","2,397",879,863,Waipu,Pfizer Booster Plan,872.0,385.6700574966829
-109100,Kaipara Coastal,Northland,"3,212","2,587","2,456",805,765,Kaipara Coastal,Pfizer Booster Plan,516.0,207.64587525150907
-109200,Maungaru,Northland,"1,549","1,291","1,249",833,806,Maungaru,Pfizer Booster Plan,206.0,165.9951651893634
-109300,Dargaville,Northland,"4,311","3,645","3,440",846,798,Dargaville,Pfizer Booster Plan,838.0,237.5956903884321
-109400,Ruawai-Matakohe,Northland,"2,139","1,836","1,773",858,829,Ruawai-Matakohe,Pfizer Booster Plan,407.0,236.90337601862632
-109500,Otamatea (Kaipara District),Northland,"1,539","1,252","1,185",814,770,Otamatea (Kaipara District),Pfizer Booster Plan,318.0,270.86882453151617
-109600,Maungaturoto,Northland,"1,060",943,906,890,855,Maungaturoto,Pfizer Booster Plan,208.0,231.11111111111111
-109700,Kaiwaka,Northland,"1,999","1,618","1,548",809,774,Kaiwaka,Pfizer Booster Plan,392.0,244.69413233458175
-109800,Mangawhai Rural,Northland,"2,231","1,814","1,763",813,790,Mangawhai Rural,Pfizer Booster Plan,454.0,298.6842105263158
-109900,Mangawhai Heads,Northland,"2,125","1,905","1,858",896,874,Mangawhai Heads,Pfizer Booster Plan,727.0,406.14525139664806
-110100,Mangawhai,Northland,961,873,851,908,886,Mangawhai,Pfizer Booster Plan,267.0,355.525965379494
+100100,North Cape,Northland,"1,561","1,355","1,305",868,836,North Cape,Pfizer Booster Plan,410.0,315.1421983089931
+100200,Rangaunu Harbour,Northland,"1,933","1,609","1,507",832,780,Rangaunu Harbour,Pfizer Booster Plan,439.0,274.20362273579013
+100400,Karikari Peninsula,Northland,"1,342","1,132","1,084",844,808,Karikari Peninsula,Pfizer Booster Plan,439.0,409.8972922502334
+100500,Tangonge,Northland,966,835,798,864,826,Tangonge,Pfizer Booster Plan,260.0,300.9259259259259
+100600,Ahipara,Northland,"1,064",892,856,838,805,Ahipara,Pfizer Booster Plan,281.0,331.3679245283019
+100700,Kaitaia East,Northland,"2,007","1,710","1,579",852,787,Kaitaia East,Pfizer Booster Plan,368.0,220.8883553421369
+100800,Kaitaia West,Northland,"2,961","2,533","2,328",855,786,Kaitaia West,Pfizer Booster Plan,578.0,236.8852459016393
+100900,Rangitihi,Northland,807,665,639,824,792,Rangitihi,Pfizer Booster Plan,199.0,304.28134556574923
+101000,Oruru-Parapara,Northland,811,642,607,792,748,Oruru-Parapara,Pfizer Booster Plan,184.0,299.1869918699187
+101100,Taumarumaru,Northland,"2,244","1,999","1,927",891,859,Taumarumaru,Pfizer Booster Plan,900.0,475.6871035940803
+101200,Herekino-Takahue,Northland,863,677,636,784,737,Herekino-Takahue,Pfizer Booster Plan,190.0,294.11764705882354
+101300,Peria,Northland,"1,044",765,705,733,675,Peria,Pfizer Booster Plan,210.0,282.6379542395693
+101400,Taemaro-Oruaiti,Northland,854,691,646,809,756,Taemaro-Oruaiti,Pfizer Booster Plan,266.0,395.8333333333333
+101500,Whakapaku,Northland,657,501,469,763,714,Whakapaku,Pfizer Booster Plan,166.0,345.8333333333333
+101600,Hokianga North,Northland,769,642,596,835,775,Hokianga North,Pfizer Booster Plan,153.0,257.1428571428572
+101700,Kohukohu-Broadwood,Northland,679,559,524,823,772,Kohukohu-Broadwood,Pfizer Booster Plan,226.0,432.9501915708812
+101800,Whakarara,Northland,"1,093",919,880,841,805,Whakarara,Pfizer Booster Plan,339.0,374.585635359116
+101900,Kaeo,Northland,"1,047",810,746,774,713,Kaeo,Pfizer Booster Plan,236.0,295.369211514393
+102000,Omahuta Forest-Horeke,Northland,971,724,662,746,682,Omahuta Forest-Horeke,Pfizer Booster Plan,198.0,282.05128205128204
+102100,Hokianga South,Northland,"1,154",850,789,737,684,Hokianga South,Pfizer Booster Plan,276.0,342.85714285714283
+102200,Lake Manuwai-Kapiro,Northland,"1,982","1,780","1,718",898,867,Lake Manuwai-Kapiro,Pfizer Booster Plan,598.0,360.2409638554217
+102300,Okaihau,Northland,"1,002",856,825,854,823,Okaihau,Pfizer Booster Plan,245.0,281.60919540229884
+102400,Rangitane-Purerua,Northland,"1,258","1,103","1,044",877,830,Rangitane-Purerua,Pfizer Booster Plan,402.0,387.2832369942197
+102500,Waipapa,Northland,711,623,597,876,840,Waipapa,Pfizer Booster Plan,195.0,318.10766721044047
+102600,Puketotara,Northland,"1,592","1,403","1,364",881,857,Puketotara,Pfizer Booster Plan,477.0,365.2373660030628
+102700,Waima Forest,Northland,957,723,664,755,694,Waima Forest,Pfizer Booster Plan,147.0,210.0
+102800,Riverview,Northland,"1,950","1,852","1,801",950,924,Riverview,Pfizer Booster Plan,877.0,488.0356149137451
+102900,Waipoua Forest,Northland,"1,130",849,784,751,694,Waipoua Forest,Pfizer Booster Plan,278.0,339.0243902439024
+103000,Kerikeri Central,Northland,"2,366","2,199","2,115",929,894,Kerikeri Central,Pfizer Booster Plan,867.0,429.42050520059433
+103100,Kerikeri South,Northland,"2,480","2,278","2,220",919,895,Kerikeri South,Pfizer Booster Plan,969.0,452.3809523809524
+103200,Ohaeawai-Waimate North,Northland,"1,058",908,873,858,825,Ohaeawai-Waimate North,Pfizer Booster Plan,282.0,308.1967213114754
+103300,Puketona-Waitangi,Northland,"1,254","1,084","1,050",864,837,Puketona-Waitangi,Pfizer Booster Plan,410.0,398.05825242718447
+103400,Ngapuhi,Northland,"1,270","1,029",951,810,749,Ngapuhi,Pfizer Booster Plan,250.0,242.24806201550388
+103500,Kaikohe,Northland,"3,610","2,881","2,654",798,735,Kaikohe,Pfizer Booster Plan,643.0,228.41918294849023
+103600,Pakaraka,Northland,539,465,442,863,820,Pakaraka,Pfizer Booster Plan,148.0,328.8888888888889
+103700,Haruru,Northland,"1,021",870,848,852,831,Haruru,Pfizer Booster Plan,341.0,430.55555555555554
+103800,Russell,Northland,774,702,693,907,895,Russell,Pfizer Booster Plan,407.0,622.3241590214067
+103900,Paihia,Northland,"1,510","1,348","1,291",893,855,Paihia,Pfizer Booster Plan,509.0,416.18969746524937
+104000,Mataraua Forest,Northland,457,358,327,783,716,Mataraua Forest,Pfizer Booster Plan,80.0,232.5581395348837
+104100,Matawaia-Taumarere,Northland,"1,249",985,919,789,736,Matawaia-Taumarere,Pfizer Booster Plan,257.0,269.10994764397907
+104200,Russell Peninsula,Northland,617,528,517,856,838,Russell Peninsula,Pfizer Booster Plan,314.0,640.8163265306123
+104300,Opua (Far North District),Northland,"1,180","1,061","1,033",899,875,Opua (Far North District),Pfizer Booster Plan,501.0,519.7095435684647
+104400,Russell Forest-Rawhiti,Northland,628,536,503,854,801,Russell Forest-Rawhiti,Pfizer Booster Plan,194.0,386.45418326693226
+104500,Moerewa,Northland,"1,338","1,109","1,031",829,771,Moerewa,Pfizer Booster Plan,288.0,262.056414922657
+104600,Kawakawa,Northland,"1,214","1,040",972,857,801,Kawakawa,Pfizer Booster Plan,281.0,274.9510763209393
+104700,Maromaku,Northland,590,463,440,785,746,Maromaku,Pfizer Booster Plan,109.0,251.73210161662817
+104800,Mangakahia-Hukerenui,Northland,"1,572","1,329","1,249",845,795,Mangakahia-Hukerenui,Pfizer Booster Plan,296.0,250.2113271344041
+104900,Whangaruru,Northland,"2,174","1,876","1,813",863,834,Whangaruru,Pfizer Booster Plan,606.0,341.0241980866629
+105100,Matarau,Northland,"2,767","2,476","2,420",895,875,Matarau,Pfizer Booster Plan,859.0,377.74846086191735
+105200,Hikurangi,Northland,"1,208","1,050",990,869,820,Hikurangi,Pfizer Booster Plan,261.0,243.92523364485984
+105300,Kauri,Northland,"1,547","1,368","1,339",884,866,Kauri,Pfizer Booster Plan,518.0,406.5934065934066
+105400,Maungatapere,Northland,"3,044","2,673","2,609",878,857,Maungatapere,Pfizer Booster Plan,982.0,389.837236998809
+105500,Kamo West,Northland,"1,931","1,753","1,689",908,875,Kamo West,Pfizer Booster Plan,702.0,419.6054991034071
+105600,Matapouri-Tutukaka,Northland,"1,623","1,462","1,427",901,879,Matapouri-Tutukaka,Pfizer Booster Plan,618.0,454.7461368653422
+105700,Kiripaka,Northland,878,770,743,877,846,Kiripaka,Pfizer Booster Plan,264.0,363.6363636363636
+105800,Kamo East,Northland,"2,459","2,229","2,121",906,863,Kamo East,Pfizer Booster Plan,648.0,312.1387283236994
+105900,Granfield Reserve,Northland,"2,853","2,676","2,606",938,913,Granfield Reserve,Pfizer Booster Plan,1223.0,485.7029388403495
+106000,Kamo Central,Northland,"1,382","1,269","1,231",918,891,Kamo Central,Pfizer Booster Plan,428.0,360.8768971332209
+106100,Whau Valley,Northland,"2,544","2,266","2,192",891,862,Whau Valley,Pfizer Booster Plan,865.0,419.29229277750846
+106200,Tikipunga North,Northland,"2,809","2,579","2,457",918,875,Tikipunga North,Pfizer Booster Plan,969.0,398.1101068200493
+106300,Pukenui,Northland,"2,021","1,875","1,845",928,913,Pukenui,Pfizer Booster Plan,821.0,463.0569655950367
+106400,Otangarei,Northland,"1,752","1,423","1,254",812,716,Otangarei,Pfizer Booster Plan,233.0,181.1819595645412
+106500,Tikipunga South,Northland,"3,210","2,921","2,808",910,875,Tikipunga South,Pfizer Booster Plan,1045.0,377.6653415251175
+106600,Kensington (Whangarei District),Northland,"2,932","2,731","2,647",931,903,Kensington (Whangarei District),Pfizer Booster Plan,1101.0,440.4
+106700,Abbey Caves-Glenbervie,Northland,"1,179","1,078","1,052",914,892,Abbey Caves-Glenbervie,Pfizer Booster Plan,445.0,428.7090558766859
+106800,Mairtown,Northland,"2,210","2,025","1,978",916,895,Mairtown,Pfizer Booster Plan,877.0,471.505376344086
+106900,Maunu-Horahora,Northland,"3,001","2,755","2,678",918,892,Maunu-Horahora,Pfizer Booster Plan,1160.0,454.54545454545456
+107000,Woodhill-Vinetown,Northland,"2,498","2,248","2,169",900,868,Woodhill-Vinetown,Pfizer Booster Plan,726.0,359.4059405940594
+107100,Whangarei Central,Northland,972,911,879,937,904,Whangarei Central,Pfizer Booster Plan,280.0,404.040404040404
+107200,Riverside,Northland,"1,893","1,670","1,626",882,859,Riverside,Pfizer Booster Plan,653.0,422.9274611398964
+107300,Raumanga,Northland,"2,703","2,312","2,108",855,780,Raumanga,Pfizer Booster Plan,596.0,264.8888888888889
+107400,Tarewa,Northland,"1,522","1,290","1,194",848,784,Tarewa,Pfizer Booster Plan,295.0,239.25385239253853
+107500,Morningside (Whangarei District),Northland,"1,930","1,753","1,666",908,863,Morningside (Whangarei District),Pfizer Booster Plan,460.0,283.2512315270936
+107600,Ngunguru,Northland,"1,059",955,932,902,880,Ngunguru,Pfizer Booster Plan,393.0,449.6567505720824
+107700,Otaika-Portland,Northland,"1,172","1,011",972,863,829,Otaika-Portland,Pfizer Booster Plan,336.0,364.03033586132176
+107800,Oakleigh-Mangapai,Northland,"1,980","1,746","1,700",882,859,Oakleigh-Mangapai,Pfizer Booster Plan,645.0,390.67231980617805
+107900,Port-Limeburners,Northland,184,168,159,913,864,Port-Limeburners,Pfizer Booster Plan,41.0,328.0
+108000,Pataua,Northland,"1,472","1,255","1,216",853,826,Pataua,Pfizer Booster Plan,443.0,370.7112970711297
+108100,Onerahi Park,Northland,"1,419","1,313","1,290",925,909,Onerahi Park,Pfizer Booster Plan,566.0,463.9344262295082
+108200,Sherwood Rise,Northland,"2,024","1,827","1,747",903,863,Sherwood Rise,Pfizer Booster Plan,607.0,352.49709639953545
+108300,Onerahi,Northland,"2,098","1,810","1,726",863,823,Onerahi,Pfizer Booster Plan,717.0,416.37630662020905
+108500,Parua Bay,Northland,"2,268","2,106","2,081",929,918,Parua Bay,Pfizer Booster Plan,946.0,484.3830005120328
+108600,Bream Bay,Northland,"1,877","1,684","1,610",897,858,Bream Bay,Pfizer Booster Plan,567.0,361.376673040153
+108700,Marsden Bay,Northland,"2,334","2,217","2,179",950,934,Marsden Bay,Pfizer Booster Plan,1006.0,490.2534113060429
+108800,Ruakaka,Northland,"2,381","2,204","2,131",926,895,Ruakaka,Pfizer Booster Plan,836.0,405.8252427184466
+108900,Bream Head,Northland,"1,225","1,125","1,102",918,900,Bream Head,Pfizer Booster Plan,513.0,499.5131450827653
+109000,Waipu,Northland,"2,777","2,442","2,397",879,863,Waipu,Pfizer Booster Plan,1093.0,484.91570541259983
+109100,Kaipara Coastal,Northland,"3,212","2,587","2,456",805,765,Kaipara Coastal,Pfizer Booster Plan,699.0,280.9485530546624
+109200,Maungaru,Northland,"1,549","1,291","1,249",833,806,Maungaru,Pfizer Booster Plan,301.0,243.1340872374798
+109300,Dargaville,Northland,"4,311","3,645","3,440",846,798,Dargaville,Pfizer Booster Plan,1111.0,314.1968325791855
+109400,Ruawai-Matakohe,Northland,"2,139","1,836","1,773",858,829,Ruawai-Matakohe,Pfizer Booster Plan,536.0,311.08531630876377
+109500,Otamatea (Kaipara District),Northland,"1,539","1,252","1,185",814,770,Otamatea (Kaipara District),Pfizer Booster Plan,404.0,343.5374149659864
+109600,Maungaturoto,Northland,"1,060",943,906,890,855,Maungaturoto,Pfizer Booster Plan,287.0,318.1818181818182
+109700,Kaiwaka,Northland,"1,999","1,618","1,548",809,774,Kaiwaka,Pfizer Booster Plan,519.0,325.8003766478343
+109800,Mangawhai Rural,Northland,"2,231","1,814","1,763",813,790,Mangawhai Rural,Pfizer Booster Plan,574.0,378.3783783783784
+109900,Mangawhai Heads,Northland,"2,125","1,905","1,858",896,874,Mangawhai Heads,Pfizer Booster Plan,878.0,492.152466367713
+110100,Mangawhai,Northland,961,873,851,908,886,Mangawhai,Pfizer Booster Plan,331.0,441.3333333333333
 110200,Okahukura Peninsula,Waitemata,"1,308","1,131","1,096",865,838,,,Masked,
-110400,Cape Rodney,Waitemata,"3,143","2,723","2,652",866,844,Cape Rodney,Pfizer Booster Plan,10.0,285.7142857142857
-110500,Wellsford,Waitemata,"1,633","1,412","1,367",865,837,Wellsford,Pfizer Booster Plan,17.0,340.0
+110400,Cape Rodney,Waitemata,"3,143","2,723","2,652",866,844,Cape Rodney,Pfizer Booster Plan,11.0,314.2857142857143
+110500,Wellsford,Waitemata,"1,633","1,412","1,367",865,837,Wellsford,Pfizer Booster Plan,21.0,411.7647058823529
 110700,South Head,Waitemata,"2,234","1,975","1,929",884,863,,,Masked,
 110800,Kaipara Hills,Waitemata,"1,727","1,492","1,459",864,845,,,Masked,
 110900,Dome Valley-Matakana,Waitemata,"1,398","1,252","1,220",896,873,,,Masked,
-111100,Warkworth West,Waitemata,"2,266","2,125","2,082",938,919,Warkworth West,Pfizer Booster Plan,Masked,250.0
+111100,Warkworth West,Waitemata,"2,266","2,125","2,082",938,919,Warkworth West,Pfizer Booster Plan,Masked,500.0
 111200,Puhoi Valley,Waitemata,"3,313","2,979","2,908",899,878,,,Masked,
 111300,Warkworth East,Waitemata,"3,091","2,888","2,848",934,921,,,Masked,
 111400,Sandspit,Waitemata,910,825,809,907,889,,,Masked,
@@ -138,7 +138,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 114600,Stanmore Bay West,Waitemata,"2,213","2,064","2,026",933,915,,,Masked,
 114700,Kumeu Rural West,Waitemata,"1,485","1,393","1,365",938,919,,,Masked,
 114800,Okura Bush,Waitemata,"1,196","1,088","1,067",910,892,,,Masked,
-114900,Whangaparoa Central,Waitemata,"3,711","3,495","3,420",942,922,Whangaparoa Central,Pfizer Booster Plan,Masked,500.0
+114900,Whangaparoa Central,Waitemata,"3,711","3,495","3,420",942,922,Whangaparoa Central,Pfizer Booster Plan,Masked,1000.0
 115000,Kumeu-Huapai,Waitemata,"3,971",Masked,"3,772",>950,950,,,Masked,
 115100,Stanmore Bay East,Waitemata,"2,371","2,175","2,115",917,892,,,Masked,
 115200,Manly West,Waitemata,"2,079","1,926","1,896",926,912,,,Masked,
@@ -211,7 +211,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 122100,Bayview South,Waitemata,"2,479",Masked,Masked,>950,>950,,,Masked,
 122200,Campbells Bay,Waitemata,"2,571",Masked,Masked,>950,>950,,,Masked,
 122300,Royal Heights South,Waitemata,"3,080","2,891","2,822",939,916,,,Masked,
-122400,Beach Haven East,Waitemata,"3,166","2,986","2,899",943,916,,,Masked,
+122400,Beach Haven East,Waitemata,"3,166","2,986","2,899",943,916,Beach Haven East,Pfizer Booster Plan,Masked,500.0
 122500,Massey East,Waitemata,"2,978",Masked,"2,763",>950,928,,,Masked,
 122600,Forrest Hill North,Waitemata,"1,981",Masked,Masked,>950,>950,,,Masked,
 122700,Glenfield North,Waitemata,"2,723",Masked,Masked,>950,>950,,,Masked,
@@ -283,7 +283,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 129300,Belmont (Auckland),Waitemata,"2,472",Masked,Masked,>950,>950,,,Masked,
 129400,Bayswater,Waitemata,"2,377",Masked,Masked,>950,>950,,,Masked,
 129500,Glendene South,Waitemata,"2,540",Masked,"2,405",>950,947,,,Masked,
-129600,Glen Eden West,Waitemata,"3,135","2,976","2,887",949,921,,,Masked,
+129600,Glen Eden West,Waitemata,"3,135","2,976","2,887",949,921,Glen Eden West,Pfizer Booster Plan,Masked,1000.0
 129700,Herne Bay,Auckland,"2,772",Masked,Masked,>950,>950,,,Masked,
 129800,Westmere North,Auckland,"2,096",Masked,Masked,>950,>950,,,Masked,
 129900,Point Chevalier East,Auckland,"3,901",Masked,Masked,>950,>950,,,Masked,
@@ -292,9 +292,9 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 130200,Saint Marys Bay,Auckland,"1,934","1,838","1,824",950,943,,,Masked,
 130300,Westmere South-Western Springs,Auckland,"2,606",Masked,Masked,>950,>950,,,Masked,
 130400,Ponsonby West,Auckland,"2,014",Masked,Masked,>950,>950,,,Masked,
-130500,Kelston North,Waitemata,"2,393",Masked,"2,218",>950,927,,,Masked,
+130500,Kelston North,Waitemata,"2,393",Masked,"2,218",>950,927,Kelston North,Pfizer Booster Plan,Masked,500.0
 130600,Avondale Rosebank ,Auckland,"3,812",Masked,"3,582",>950,940,,,Masked,
-130700,Narrow Neck,Waitemata,"3,823",Masked,Masked,>950,>950,,,Masked,
+130700,Narrow Neck,Waitemata,"3,823",Masked,Masked,>950,>950,Narrow Neck,Pfizer Booster Plan,Masked,1000.0
 130800,Glen Eden North,Waitemata,"2,203",Masked,Masked,>950,>950,,,Masked,
 130900,Glen Eden Woodglen,Waitemata,"3,570","3,387","3,311",949,927,,,Masked,
 131000,Kelston South,Waitemata,"2,171",Masked,"2,057",>950,947,,,Masked,
@@ -433,7 +433,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 144400,Ellerslie East,Auckland,"2,557",Masked,Masked,>950,>950,,,Masked,
 144500,Saint Johns East,Auckland,"2,331",Masked,Masked,>950,>950,,,Masked,
 144600,Oneroa West,Auckland,"1,265","1,189","1,165",940,921,,,Masked,
-144700,Glen Innes West,Auckland,"3,628","3,380","3,263",932,899,,,Masked,
+144700,Glen Innes West,Auckland,"3,628","3,380","3,263",932,899,Glen Innes West,Pfizer Booster Plan,Masked,250.0
 144800,Ellerslie South,Auckland,"2,144",Masked,Masked,>950,>950,,,Masked,
 144900,Stonefields West,Auckland,"1,858",Masked,Masked,>950,>950,,,Masked,
 145000,Onehunga Central,Auckland,"2,823",Masked,Masked,>950,>950,,,Masked,
@@ -721,7 +721,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 173900,Morrinsville East,Waikato,"4,334",Masked,"4,043",>950,933,,,Masked,
 174000,Morrinsville West,Waikato,"2,517","2,332","2,258",926,897,,,Masked,
 174100,Te Aroha East,Waikato,"2,230","1,924","1,819",863,816,,,Masked,
-174200,Te Aroha West,Waikato,"1,763","1,617","1,579",917,896,,,Masked,
+174200,Te Aroha West,Waikato,"1,763","1,617","1,579",917,896,Te Aroha West,Pfizer Booster Plan,Masked,500.0
 174300,Waihou-Manawaru,Waikato,977,854,820,874,839,,,Masked,
 174400,Waitoa-Ngarua,Waikato,926,870,848,940,916,,,Masked,
 174500,Richmond Downs-Wardville,Waikato,997,903,880,906,883,,,Masked,
@@ -751,7 +751,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 176900,Huntington,Waikato,"2,238",Masked,Masked,>950,>950,,,Masked,
 177000,Western Heights (Hamilton City),Waikato,"2,620",Masked,Masked,>950,>950,,,Masked,
 177100,Nawton West,Waikato,"3,088",Masked,"2,861",>950,926,Nawton West,Pfizer Booster Plan,Masked,400.0
-177200,Nawton East,Waikato,"3,433","3,199","3,075",932,896,,,Masked,
+177200,Nawton East,Waikato,"3,433","3,199","3,075",932,896,Nawton East,Pfizer Booster Plan,Masked,333.3333333333333
 177300,Chartwell,Waikato,"2,113","1,969","1,896",932,897,,,Masked,
 177400,Forest Lake (Hamilton City),Waikato,"2,134","2,005","1,956",940,917,,,Masked,
 177500,Chedworth,Waikato,"1,560","1,479","1,448",948,928,,,Masked,
@@ -872,7 +872,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 189300,Richmond Heights,Lakes,"1,979","1,819","1,756",919,887,,,Masked,
 189400,Wharewaka,Lakes,"1,126",Masked,Masked,>950,>950,,,Masked,
 189600,Waitahanui,Lakes,666,571,534,857,802,Waitahanui,Pfizer Booster Plan,Masked,500.0
-189700,Turangi,Lakes,"3,049","2,663","2,498",873,819,,,Masked,
+189700,Turangi,Lakes,"3,049","2,663","2,498",873,819,Turangi,Pfizer Booster Plan,Masked,1000.0
 189800,Rangataiki,Lakes,100,Masked,Masked,>950,>950,,,Masked,
 189900,Taharua,Lakes,51,46,44,902,863,,,Masked,
 190100,Waiau,Bay of Plenty,302,266,252,881,834,,,Masked,
@@ -1002,7 +1002,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 202900,Allandale,Bay of Plenty,"2,250","2,021","1,962",898,872,,,Masked,
 203000,Mokorua Bush,Bay of Plenty,"1,273","1,190","1,171",935,920,,,Masked,
 203100,Wainui ,Bay of Plenty,"1,226",992,927,809,756,,,Masked,
-203200,Ohope,Bay of Plenty,"2,845","2,666","2,612",937,918,,,Masked,
+203200,Ohope,Bay of Plenty,"2,845","2,666","2,612",937,918,Ohope,Pfizer Booster Plan,Masked,500.0
 203400,Galatea,Bay of Plenty,960,758,697,790,726,,,Masked,
 203500,Waingarara-Waimana,Bay of Plenty,"1,989","1,576","1,436",792,722,,,Masked,
 203600,Murupara,Bay of Plenty,"1,421",993,881,699,620,,,Masked,
@@ -1430,7 +1430,7 @@ Unknown,Unknown,Unknown,"66,039",Masked,Masked,>950,>950,,,Masked,
 246900,Wainuiomata West,Hutt Valley,"3,117",Masked,"2,888",>950,927,,,Masked,
 247000,Glendale,Hutt Valley,"3,432","3,215","3,103",937,904,,,Masked,
 247100,Wainuiomata Central,Hutt Valley,"1,546","1,459","1,420",944,918,,,Masked,
-247200,Eastbourne,Hutt Valley,"2,424",Masked,Masked,>950,>950,,,Masked,
+247200,Eastbourne,Hutt Valley,"2,424",Masked,Masked,>950,>950,Eastbourne,Pfizer Booster Plan,Masked,1000.0
 247300,Homedale East,Hutt Valley,"2,561","2,424","2,337",947,913,,,Masked,
 247400,Homedale West,Hutt Valley,"2,247","2,084","1,992",927,887,,,Masked,
 247500,Makara-Ohariu,Capital and Coast,918,Masked,865,>950,942,,,Masked,
